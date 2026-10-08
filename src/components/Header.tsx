@@ -10,7 +10,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry, onOpenHajj, activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,27 +51,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry, onOpenHajj, activ
               e.preventDefault();
               scrollTo('home');
             }}
-            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5D4B] rounded min-h-[40px]"
+            className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0B5D4B] rounded shrink-0"
           >
-            {!logoError ? (
-              <img
-                src="https://res.cloudinary.com/ddeivqykl/image/upload/v1791466596/As-safar_Umrah_Services_Logo_ckuplw.png"
-                alt="As-Safar Umrah Services"
-                className="h-10 sm:h-12 w-auto object-contain"
-                loading="eager"
-                decoding="async"
-                onError={() => setLogoError(true)}
-              />
-            ) : (
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-[#0B5D4B] flex items-center justify-center text-[#C9A24D] shadow-sm">
-                  <span className="font-serif font-bold text-base">س</span>
-                </div>
-                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#0B5D4B]">
-                  As-Safar
-                </span>
-              </div>
-            )}
+            <img
+              src="https://res.cloudinary.com/ddeivqykl/image/upload/v1791468091/As-safar_Umrah_Services_Logo_1_m8pmg8.png"
+              alt="As-Safar Umrah Services"
+              className="h-10 sm:h-12 w-auto object-contain"
+              width={144}
+              height={48}
+              loading="eager"
+            />
           </a>
 
           {/* Zone 2: Navigation Links (Desktop 1024px+) */}
