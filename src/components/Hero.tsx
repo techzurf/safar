@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplorePackages, onTalkToTeam }) =
                 {/* Kaaba & Tawaf Video */}
                 {!videoError && (
                   <video
-                    src="https://res.cloudinary.com/ddeivqykl/video/upload/v1791466114/vidssave.com_Tawaf_around_the_Kaaba_1080P_bnqve4.mp4"
+                    src="https://res.cloudinary.com/ddeivqykl/video/upload/v1791522161/vidssave.com_What_is_Hajj_and_how_do_Muslims_perform_it__720P_zcj3hi.mp4"
                     autoPlay
                     loop
                     muted
